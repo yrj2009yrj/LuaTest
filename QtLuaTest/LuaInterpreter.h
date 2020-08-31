@@ -15,22 +15,27 @@ public:
 
 public:
     LuaInterpreter(QObject* parent=nullptr);
+
     ~LuaInterpreter();
 
     LuaInterpreter(const LuaInterpreter&) = delete;
+
     LuaInterpreter& operator = (const LuaInterpreter&) = delete;
 
     static LuaInterpreter* getInstance();
-
+    
     void init();
+    
+    int notifyforData();
+
+    void doFile(QString);
+
 
     static int openLight(lua_State*);
 
     static int waitforData(lua_State*);
 
-    int notifyforData();
 
-    void doFile(QString);
 
 private:
     lua_State* luaState;

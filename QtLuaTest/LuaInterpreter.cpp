@@ -1,11 +1,9 @@
 #include "LuaInterpreter.h"
 
-#include <QtCore/QDebug>
-#include <QtCore/QThread>
-#include <QtCore/QMutexLocker>
 #include <QtConcurrent/QtConcurrent>
-
+#include <QtCore/QDebug>
 #include <QtCore/QMutex>
+#include <QtCore/QMutexLocker>
 #include <QtCore/QWaitcondition>
 
 QMutex* LuaInterpreter::mutex = new QMutex();
@@ -49,7 +47,6 @@ int LuaInterpreter::openLight(lua_State* lua_state)
 int LuaInterpreter::waitforData(lua_State* lua_state)
 {
     QMutexLocker locker(mutex);
-
     if (waitCondition->wait(mutex, 5000)) {
         lua_pushboolean(lua_state, true);
     }
@@ -75,9 +72,10 @@ void LuaInterpreter::init()
 
 void LuaInterpreter::doFile(QString file)
 {
-    QtConcurrent::run([&](){
-        luaL_dofile(luaState, file.toLatin1().data());
+    QtConcurrent::run([=](){
+        qDebug() << file << luaState;
+        if (luaL_dofile(luaState, file.toLatin1().data())) {
+            qDebug() << "lua do file error";
+        }
     });
-
-    qDebug() << "end";
 }

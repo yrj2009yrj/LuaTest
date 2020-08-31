@@ -1,6 +1,7 @@
 #include <QtCore/QCoreApplication>
 
 #include <QtCore/QThread>
+
 #include "LuaInterpreter.h"
 
 int main(int argc, char *argv[])
