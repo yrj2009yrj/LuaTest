@@ -4,39 +4,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LuaTest1", "LuaTest1\LuaTest1.vcxproj", "{9312354F-E376-4EEF-9E2B-5418C538793C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2E38BB6C-F843-4F8D-AF14-FA8F434BAD5B} = {2E38BB6C-F843-4F8D-AF14-FA8F434BAD5B}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LuaLib", "LuaLib\LuaLib.vcxproj", "{2E38BB6C-F843-4F8D-AF14-FA8F434BAD5B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QtLuaTest", "QtLuaTest\QtLuaTest.vcxproj", "{2DEA9E5A-5F10-440D-B651-C3494ACF33DA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2E38BB6C-F843-4F8D-AF14-FA8F434BAD5B} = {2E38BB6C-F843-4F8D-AF14-FA8F434BAD5B}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9312354F-E376-4EEF-9E2B-5418C538793C}.Debug|x64.ActiveCfg = Debug|Win32
-		{9312354F-E376-4EEF-9E2B-5418C538793C}.Debug|x64.Build.0 = Debug|Win32
 		{9312354F-E376-4EEF-9E2B-5418C538793C}.Debug|x86.ActiveCfg = Debug|Win32
 		{9312354F-E376-4EEF-9E2B-5418C538793C}.Debug|x86.Build.0 = Debug|Win32
-		{9312354F-E376-4EEF-9E2B-5418C538793C}.Release|x64.ActiveCfg = Release|x64
-		{9312354F-E376-4EEF-9E2B-5418C538793C}.Release|x64.Build.0 = Release|x64
 		{9312354F-E376-4EEF-9E2B-5418C538793C}.Release|x86.ActiveCfg = Release|Win32
 		{9312354F-E376-4EEF-9E2B-5418C538793C}.Release|x86.Build.0 = Release|Win32
-		{2E38BB6C-F843-4F8D-AF14-FA8F434BAD5B}.Debug|x64.ActiveCfg = Debug|Win32
-		{2E38BB6C-F843-4F8D-AF14-FA8F434BAD5B}.Debug|x64.Build.0 = Debug|Win32
 		{2E38BB6C-F843-4F8D-AF14-FA8F434BAD5B}.Debug|x86.ActiveCfg = Debug|Win32
 		{2E38BB6C-F843-4F8D-AF14-FA8F434BAD5B}.Debug|x86.Build.0 = Debug|Win32
-		{2E38BB6C-F843-4F8D-AF14-FA8F434BAD5B}.Release|x64.ActiveCfg = Release|x64
-		{2E38BB6C-F843-4F8D-AF14-FA8F434BAD5B}.Release|x64.Build.0 = Release|x64
 		{2E38BB6C-F843-4F8D-AF14-FA8F434BAD5B}.Release|x86.ActiveCfg = Release|Win32
 		{2E38BB6C-F843-4F8D-AF14-FA8F434BAD5B}.Release|x86.Build.0 = Release|Win32
-		{2DEA9E5A-5F10-440D-B651-C3494ACF33DA}.Debug|x64.ActiveCfg = Debug|Win32
 		{2DEA9E5A-5F10-440D-B651-C3494ACF33DA}.Debug|x86.ActiveCfg = Debug|Win32
 		{2DEA9E5A-5F10-440D-B651-C3494ACF33DA}.Debug|x86.Build.0 = Debug|Win32
-		{2DEA9E5A-5F10-440D-B651-C3494ACF33DA}.Release|x64.ActiveCfg = Release|Win32
 		{2DEA9E5A-5F10-440D-B651-C3494ACF33DA}.Release|x86.ActiveCfg = Release|Win32
 		{2DEA9E5A-5F10-440D-B651-C3494ACF33DA}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection

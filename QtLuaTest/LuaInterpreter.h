@@ -12,30 +12,20 @@ class LuaInterpreter : public QObject
 {
     Q_OBJECT
 public:
-
-public:
     LuaInterpreter(QObject* parent=nullptr);
-
     ~LuaInterpreter();
-
     LuaInterpreter(const LuaInterpreter&) = delete;
-
     LuaInterpreter& operator = (const LuaInterpreter&) = delete;
 
     static LuaInterpreter* getInstance();
     
     void init();
-    
+    void doFile(QString);
     int notifyforData();
 
-    void doFile(QString);
-
-
+private:
     static int openLight(lua_State*);
-
     static int waitforData(lua_State*);
-
-
 
 private:
     lua_State* luaState;
