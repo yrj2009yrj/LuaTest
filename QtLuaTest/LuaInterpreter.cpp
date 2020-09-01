@@ -20,9 +20,6 @@ LuaInterpreter::LuaInterpreter(QObject* parent)
 LuaInterpreter::~LuaInterpreter()
 {
     lua_close(luaState);    //ÊÍ·ÅĞéÄâ»ú
-
-    delete mutex;
-    delete waitCondition;
 }
 
 LuaInterpreter* LuaInterpreter::getInstance()
