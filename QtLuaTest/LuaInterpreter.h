@@ -18,7 +18,7 @@ public:
     LuaInterpreter& operator = (const LuaInterpreter&) = delete;
 
     static LuaInterpreter* getInstance();
-    
+
     void init();
     void doFile(QString);
     int notifyforData();

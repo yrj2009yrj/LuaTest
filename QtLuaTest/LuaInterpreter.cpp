@@ -36,9 +36,7 @@ int LuaInterpreter::openLight(lua_State* lua_state)
     qDebug() << num1 << num2 << num3;
     lua_pushstring(lua_state, "Hello Lua 11111");
     lua_pushstring(lua_state, "Hello Lua 22222");
-    lua_pushstring(lua_state, "Hello Lua 33333");
-    lua_pushstring(lua_state, "Hello Lua 44444");
-    return 4;
+    return 2;
 }
 
 int LuaInterpreter::waitforData(lua_State* lua_state)

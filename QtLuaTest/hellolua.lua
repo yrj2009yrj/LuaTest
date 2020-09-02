@@ -1,6 +1,6 @@
 function sleep(n)
     if n > 0 then os.execute("ping -n " .. tonumber(n + 1) .. " localhost > NUL") end
- end
+end
 
 days = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"}
 for i,v in ipairs(days)
@@ -18,8 +18,9 @@ hello1, hello2 = openLight(1, 2, 3)
 print(hello1)
 print(hello2)
 
-local a=0
-while( a < 20 )
+flag = true
+local a = 0
+while( flag )
 do
    local ret = waitforData()
    if (ret) then
