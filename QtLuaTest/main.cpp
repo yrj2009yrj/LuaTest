@@ -11,9 +11,9 @@ int main(int argc, char *argv[])
     LuaInterpreter::getInstance()->init();
     LuaInterpreter::getInstance()->doFile("hellolua.lua");
 
-    for (int i = 0; i < 20; ++i) {
+    for (int i = 0; i < 200; ++i) {
         QThread::sleep(2);
-        LuaInterpreter::getInstance()->notifyforData();
+        LuaInterpreter::getInstance()->doString();
     }
 
     return a.exec();

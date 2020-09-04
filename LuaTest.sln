@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QtLuaTest", "QtLuaTest\QtLu
 		{2E38BB6C-F843-4F8D-AF14-FA8F434BAD5B} = {2E38BB6C-F843-4F8D-AF14-FA8F434BAD5B}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestAlgorithm", "TestAlgorithm\TestAlgorithm.vcxproj", "{555C42E3-E34D-4F88-BE37-02C057CD8D4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -33,6 +35,10 @@ Global
 		{2DEA9E5A-5F10-440D-B651-C3494ACF33DA}.Debug|x86.Build.0 = Debug|Win32
 		{2DEA9E5A-5F10-440D-B651-C3494ACF33DA}.Release|x86.ActiveCfg = Release|Win32
 		{2DEA9E5A-5F10-440D-B651-C3494ACF33DA}.Release|x86.Build.0 = Release|Win32
+		{555C42E3-E34D-4F88-BE37-02C057CD8D4A}.Debug|x86.ActiveCfg = Debug|Win32
+		{555C42E3-E34D-4F88-BE37-02C057CD8D4A}.Debug|x86.Build.0 = Debug|Win32
+		{555C42E3-E34D-4F88-BE37-02C057CD8D4A}.Release|x86.ActiveCfg = Release|Win32
+		{555C42E3-E34D-4F88-BE37-02C057CD8D4A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

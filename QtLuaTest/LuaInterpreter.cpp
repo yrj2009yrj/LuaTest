@@ -67,10 +67,20 @@ void LuaInterpreter::init()
 
 void LuaInterpreter::doFile(QString file)
 {
-    QtConcurrent::run([=](){
+    //QtConcurrent::run([=]() {
         qDebug() << file << luaState;
         if (luaL_dofile(luaState, file.toLatin1().data())) {
             qDebug() << "lua do file error";
         }
-    });
+    //});
+
+        qDebug() << "end";
 }
+
+void LuaInterpreter::doString()
+{
+    //luaL_dostring(luaState, str.toLatin1().data());
+    lua_getglobal(luaState, "toLive");            // 获取函数，压入栈中
+    lua_pcall(luaState, 0, 0, 0);
+}
+
