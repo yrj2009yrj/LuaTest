@@ -11,10 +11,10 @@ lua_State *L;
 
 static void stackDump(lua_State* L) //打印整个栈的内容，由下而上，根据元素类型打印
 {
-    int top = lua_gettop(L);    //返回栈顶元素的索引。 因为索引是从 1 开始编号的， 
+    int top = lua_gettop(L);    //返回栈顶元素的索引。 因为索引是从 1 开始编号的，
                                 //所以这个结果等于栈上的元素个数； 特别指出，0 表示栈为空
     for (int i = 1; i <= top; ++i) {
-        int t = lua_type(L, i); //返回给定有效索引处值的类型， 
+        int t = lua_type(L, i); //返回给定有效索引处值的类型，
                                 //当索引无效（或无法访问）时则返回 LUA_TNONE
         switch (t) {
             case LUA_TSTRING:
@@ -27,8 +27,8 @@ static void stackDump(lua_State* L) //打印整个栈的内容，由下而上，
                 printf("%g", lua_tonumber(L, i));
                 break;
             default:
-                printf("%s", lua_typename(L, t));   //返回 t 表示的类型名， 
-                                                    //这个 tp 必须是 lua_type 可能返回的值中之一。 
+                printf("%s", lua_typename(L, t));   //返回 t 表示的类型名，
+                                                    //这个 tp 必须是 lua_type 可能返回的值中之一。
                 break;
         }
         printf("");
@@ -72,7 +72,7 @@ int main(int argc, char * argv[])
         return 0;
     }
 
-    //3.运行Lua文件  
+    //3.运行Lua文件
     bRet = lua_pcall(L, 0, 0, 0);
     if (bRet)
     {
@@ -98,7 +98,7 @@ int main(int argc, char * argv[])
     lua_getglobal(L, "add");            // 获取函数，压入栈中
     lua_pushnumber(L, 10);              // 压入第一个参数
     lua_pushnumber(L, 20);              // 压入第二个参数
-    int iRet = lua_pcall(L, 2, 1, 0);   // 调用函数，调用完成以后，会将返回值压入栈中，2表示参数个数，1表示返回结果个数。  
+    int iRet = lua_pcall(L, 2, 1, 0);   // 调用函数，调用完成以后，会将返回值压入栈中，2表示参数个数，1表示返回结果个数。
     if (iRet)                           // 调用出错
     {
         const char* pErrorMsg = lua_tostring(L, -1);

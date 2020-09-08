@@ -13,7 +13,14 @@ int main(int argc, char *argv[])
 
     for (int i = 0; i < 200; ++i) {
         QThread::sleep(2);
-        LuaInterpreter::getInstance()->doString();
+
+        if (i == 5) {
+            LuaInterpreter::getInstance()->doStop();
+            break;
+        }
+        else {
+            LuaInterpreter::getInstance()->doString();
+        }
     }
 
     return a.exec();

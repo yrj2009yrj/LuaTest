@@ -22,6 +22,7 @@ public:
     void init();
     void doFile(QString);
     void doString();
+    void doStop();
     int notifyforData();
 
 private:
